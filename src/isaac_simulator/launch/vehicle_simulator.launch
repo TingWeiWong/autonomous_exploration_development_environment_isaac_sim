@@ -33,7 +33,7 @@
   <arg name="verbose" default="false"/>
   <arg name="world_name" default="garage"/>
 
-  <node pkg="vehicle_simulator" type="vehicleSimulator" name="vehicleSimulator" output="screen" required="true">
+  <node pkg="isaac_simulator" type="isaacSimulator" name="isaacSimulator" output="screen" required="true">
     <param name="sensorOffsetX" value="$(arg sensorOffsetX)" />
     <param name="sensorOffsetY" value="$(arg sensorOffsetY)" />
     <param name="vehicleHeight" value="$(arg vehicleHeight)" />

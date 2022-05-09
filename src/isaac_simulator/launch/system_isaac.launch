@@ -1,7 +1,7 @@
 <launch>
 
   <arg name="world_name" default="campus"/>
-  <arg name="vehicleHeight" default="0.75"/>
+  <arg name="vehicleHeight" default="12.5"/>
   <arg name="cameraOffsetZ" default="0"/>
   <arg name="vehicleX" default="0"/>
   <arg name="vehicleY" default="0"/>
@@ -41,6 +41,6 @@
     <arg name="world_name" value="$(arg world_name)"/>
   </include>
 
-  <node launch-prefix="nice" pkg="rviz" type="rviz" name="rvizGA" args="-d $(find isaac_simulator)/rviz/vehicle_simulator.rviz" respawn="true"/>
+  <node launch-prefix="nice" pkg="rviz" type="rviz" name="rvizGA" args="-d $(find isaac_simulator)/rviz/isaac_simulator.rviz" respawn="true"/>
 
 </launch>
