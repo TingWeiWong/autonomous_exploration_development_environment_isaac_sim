@@ -1,6 +1,6 @@
 <launch>
 
-  <arg name="world_name" default="campus"/>
+  <arg name="world_name" default="isaac_hospital"/>
   <arg name="vehicleHeight" default="12.5"/>
   <arg name="cameraOffsetZ" default="0"/>
   <arg name="vehicleX" default="0"/>

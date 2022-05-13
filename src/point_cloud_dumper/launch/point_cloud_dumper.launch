@@ -1,0 +1,11 @@
+<launch>
+
+  <node pkg="point_cloud_dumper" type="pointCloudDumper" name="pointCloudDumper" output="screen">
+    <param name="saveDataDir" type="string" value="$(env HOME)/Desktop" />
+    <param name="stateEstimationTopic" type="string" value="/aft_mapped_to_init" />
+    <param name="registeredScanTopic" type="string" value="/registered_scan" />
+    <param name="flipStateEstimation" type="bool" value="false" />
+    <param name="flipRegisteredScan" type="bool" value="false" />
+  </node>
+
+</launch>

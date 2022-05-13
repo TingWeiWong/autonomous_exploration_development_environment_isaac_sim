@@ -159,12 +159,12 @@ void scanHandler(const sensor_msgs::PointCloud2::ConstPtr& scanIn)
   
 
   int scanDataSize = scanData->points.size();
-  float HEIGHT_SCALE = 13;
+  float SCALE = 1.25;
   for (int i = 0; i < scanDataSize; i++)
   {
-    scanData->points[i].x = scanData->points[i].x * 5;
-    scanData->points[i].y = scanData->points[i].y * 5;
-    scanData->points[i].z = scanData->points[i].z * HEIGHT_SCALE;
+    scanData->points[i].x = scanData->points[i].x*SCALE;
+    scanData->points[i].y = scanData->points[i].y*SCALE;
+    scanData->points[i].z = scanData->points[i].z*SCALE;
 
     float pointX1 = scanData->points[i].x;
     float pointY1 = scanData->points[i].y * cosTerrainRecRoll - scanData->points[i].z * sinTerrainRecRoll;
@@ -453,9 +453,10 @@ int main(int argc, char** argv)
     // robotState.pose.position.y = vehicleY;
     // robotState.pose.position.z = vehicleZ;
     // pubModelState.publish(robotState);
-    geoQuat = tf::createQuaternionMsgFromRollPitchYaw(terrainRoll, terrainPitch, 0);
+    // geoQuat = tf::createQuaternionMsgFromRollPitchYaw(terrainRoll, terrainPitch, 0);
 
     robotState.orientation = geoQuat;
+    robotState.orientation.x = vehicleYaw;
     robotState.position.x = vehicleX;
     robotState.position.y = vehicleY;
     robotState.position.z = vehicleZ;
