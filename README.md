@@ -28,7 +28,7 @@ Source the ROS workspace and launch the system.
 
 ## Running the NVIDIA Isaac-Sim
 
-This repository use Isaac-Sim environment for development. Download and Install the NVIDIA Isaac-Sim simulator environment from the [official guide](https://docs.omniverse.nvidia.com/app_isaacsim/app_isaacsim/install_basic.html#isaac-sim-first-run). Also, our development enviroment depend on some example environment from the Nvidia. Thus, install and set up Nucleus server follow the instructions from [offical guide](https://docs.omniverse.nvidia.com/prod_nucleus/prod_nucleus.html).
+This repository use Isaac-Sim environment for development (See hardware requirement [here](https://docs.omniverse.nvidia.com/app_isaacsim/app_isaacsim/requirements.html)). Download and Install the NVIDIA Isaac-Sim simulator environment from the [official guide](https://docs.omniverse.nvidia.com/app_isaacsim/app_isaacsim/install_basic.html#isaac-sim-first-run). Also, our development enviroment depend on some example environment from the Nvidia. Thus, install and set up Nucleus server follow the instructions from [offical guide](https://docs.omniverse.nvidia.com/prod_nucleus/prod_nucleus.html).
 
 Then, running the simulation and load the robot into the Isaac-Sim. 
 
