@@ -3,6 +3,7 @@ from omni.isaac.kit import SimulationApp
 import numpy as np
 import sys
 import argparse
+import os
 
 
 # We have to start simulation app first to import those packages
@@ -31,11 +32,15 @@ CLOCK_PATH = "/World/ROS_Clock"
 HEIGHT = 30
 
 class HospitalScene:
-    def __init__(self, RootPath = "/home/yjt/Documents/autonomous_exploration_development_environment_isaac_sim/src/isaac_simulator/world"):
-        ROBOT_USD_PATH = RootPath + "/Carter_ROS_template.usd"
+    def __init__(self, RootPath):
+        ROBOT_USD_PATH = os.path.join(RootPath, "../world/Carter_ROS_template.usd")
         BACKGROUND_USD_PATH = "/Isaac/Environments/Hospital/hospital.usd"
-        LIDAR_USD_PATH = RootPath + "/Lidar.usd"
+        LIDAR_USD_PATH = os.path.join(RootPath, "../world/Lidar.usd")
+        print("*****"*8)
+        print(ROBOT_USD_PATH)
+        print(LIDAR_USD_PATH)
         SCALE_FACTOR = 0.75
+        print("*****"*8)
         self.world = World(stage_units_in_meters=0.01)
         # Locate /Isaac folder on nucleus server to load environment and robot stages
         result, _nucleus_path = nucleus.find_nucleus_server()
@@ -128,9 +133,7 @@ class HospitalScene:
         simulation_app.close()
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--root_path", type = str, help = "The path to the current file")
-    args = parser.parse_args()
+    ROOTPATH = os.path.dirname(os.path.realpath(__file__))
 
-    scene_test = HospitalScene(args.root_path)
+    scene_test = HospitalScene(ROOTPATH)
     scene_test.run_simulator()
