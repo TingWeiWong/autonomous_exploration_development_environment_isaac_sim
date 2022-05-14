@@ -38,9 +38,13 @@ The "ISAAC_INSTALL_PATH" here is usually locate at "~/.local/share/ov/pkg/isaac_
 
 ## TARE planner
 
+The result is available [here](https://www.youtube.com/watch?v=Kpt596Q3FoU)
+
 For using TARE planner using this development environment. After running the simulator and Isaac-sim, please follow instructions [here](https://github.com/caochao39/tare_planner) to run.
 
 
 ## FAR planner
+
+The result is available [here](https://www.youtube.com/watch?v=WxP7fuE4zdQ)
 
 For using FAR planner using this development environment. After running the simulator and Isaac-sim, please follow instructions [here](https://github.com/MichaelFYang/far_planner) to run.
