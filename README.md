@@ -32,7 +32,7 @@ This repository use Isaac-Sim environment for development. Download and Install 
 
 Then, running the simulation and load the robot into the Isaac-Sim. 
 
-```ISAAC_INSTALL_PATH/python.sh ./src/isaac_simulator/isaac_env/isaac_hospital_env.py --root_path REPO_ROOT_PATH```
+```ISAAC_INSTALL_PATH/python.sh ./src/isaac_simulator/isaac_env/isaac_hospital_env.py```
 
 The "ISAAC_INSTALL_PATH" here is usually locate at "~/.local/share/ov/pkg/isaac_sim-2021.2.1".
 
