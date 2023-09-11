@@ -43,8 +43,8 @@ class HospitalScene:
         print("*****"*8)
         self.world = World(stage_units_in_meters=0.01)
         # Locate /Isaac folder on nucleus server to load environment and robot stages
-        result, _nucleus_path = nucleus.find_nucleus_server()
-        if result is False:
+        _nucleus_path = nucleus.get_assets_root_path()
+        if _nucleus_path is False:
             carb.log_error("Could not find nucleus server with /Isaac folder, exiting")
             simulation_app.close()
             sys.exit()
